@@ -26,7 +26,7 @@
 
 ;;; Commentary:
 ;;
-;; Company completion for emmet.
+;; Company completion for emmet
 ;;
 
 ;;; Code:
