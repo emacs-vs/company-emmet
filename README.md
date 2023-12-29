@@ -6,6 +6,8 @@
 
 [![CI](https://github.com/emacs-vs/company-emmet/actions/workflows/test.yml/badge.svg)](https://github.com/emacs-vs/company-emmet/actions/workflows/test.yml)
 
+<img src="./etc/demo.png"/>
+
 Inspired from https://github.com/minad/corfu/discussions/396#discussioncomment-7920346.
 
 ## 💾 Quickstart
