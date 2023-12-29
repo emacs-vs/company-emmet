@@ -64,7 +64,10 @@ Arguments COMMAND, ARG and IGNORED are standard arguments from `company-mode`."
     (prefix (list (company-emmet--prefix)))
     (candidates (list (company-emmet--candidate)))
     (doc-buffer (company-emmet--doc-buffer arg))
-    (post-completion (call-interactively #'emmet-expand-line))))
+    (post-completion
+     (delete-region (- (point) (length (company-emmet--prefix))) (point))
+     (insert arg)
+     (call-interactively #'emmet-expand-line))))
 
 (provide 'company-emmet)
 ;;; company-emmet.el ends here
