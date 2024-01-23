@@ -42,7 +42,7 @@
 
 (defun company-emmet--candidate ()
   "Return the candidate!"
-  (string-trim (thing-at-point 'line)))
+  (car (emmet-expr-on-line)))
 
 (defun company-emmet--prefix ()
   "Return the candidate!"
@@ -61,7 +61,7 @@ Arguments COMMAND, ARG and IGNORED are standard arguments from `company-mode`."
   (interactive (list 'interactive))
   (cl-case command
     (interactive (company-begin-backend 'company-emmet))
-    (prefix (list (company-emmet--prefix)))
+    (prefix (company-emmet--prefix))
     (candidates (list (company-emmet--candidate)))
     (doc-buffer (company-emmet--doc-buffer arg))
     (post-completion
